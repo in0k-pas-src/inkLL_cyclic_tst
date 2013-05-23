@@ -25,28 +25,28 @@ procedure  tTests_inkCLL_11_Count.Count_Nil;
 begin
     LIST:=_list_crt_NIL;
     //--
-    AssertEquals(0,inkCLL_clcCount(LIST));
+    AssertEquals(_list_Count,inkCLL_clcCount(LIST));
 end;
 
 procedure  tTests_inkCLL_11_Count.Count_One;
 begin
     LIST:=_list_crt_One;
     //--
-    AssertEquals(1,inkCLL_clcCount(LIST));
+    AssertEquals(_list_Count,inkCLL_clcCount(LIST));
 end;
 
 procedure  tTests_inkCLL_11_Count.Count_Two;
 begin
     LIST:=_list_crt_Two;
     //--
-    AssertEquals(2,inkCLL_clcCount(LIST));
+    AssertEquals(_list_Count,inkCLL_clcCount(LIST));
 end;
 
 procedure  tTests_inkCLL_11_Count.Count_SiX;
 begin
     LIST:=_list_crt_Six;
     //--
-    AssertEquals(6,inkCLL_clcCount(LIST));
+    AssertEquals(_list_Count,inkCLL_clcCount(LIST));
 end;
 
 initialization
