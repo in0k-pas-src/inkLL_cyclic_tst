@@ -8,7 +8,7 @@ interface
 uses testregistry,
     uTST_CORE_inkLLc,
     uTST_inkLLc_20_Enumerate,
-     inkLLcyclic;
+     inkLL_cyclic;
 
 type
 

@@ -7,7 +7,7 @@ interface
 
 uses
    uTST_CORE_inkLLc,
-    inkLLcyclic;
+    inkLL_cyclic;
 
 type
 
