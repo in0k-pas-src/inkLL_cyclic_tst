@@ -1,4 +1,4 @@
-unit TSTs_inkCLL_00_BASE;
+unit TSTs_inkLLc_00_BASE;
 (*$define testCase -- пометка для gitExtensions-Statickics что это файл ТЕСТ
   [Test
 *)
@@ -6,12 +6,12 @@ unit TSTs_inkCLL_00_BASE;
 interface
 
 uses testregistry,
-    uTST_CORE_inkCLL,
-     inkCLL;
+    uTST_CORE_inkLLc,
+     inkLLcyclic;
 
 type
 
- tTests_inkCLL_00_BASE=class(tTSTCTC_CORE_inkCLL)
+ tTests_inkLLc_00_BASE=class(tTSTCTC_CORE_inkLLc)
   published
     procedure Init;
     procedure isEmpty;
@@ -19,25 +19,25 @@ type
 
 implementation
 
-procedure tTests_inkCLL_00_BASE.isEmpty;
+procedure tTests_inkLLc_00_BASE.isEmpty;
 begin
     LIST:=@self;
-    AssertFalse(inkCLL_isEmpty(LIST));
+    AssertFalse(inkLLc_isEmpty(LIST));
     //---
     LIST:=nil;
-    AssertTrue (inkCLL_isEmpty(LIST));
+    AssertTrue (inkLLc_isEmpty(LIST));
 end;
 
-procedure tTests_inkCLL_00_BASE.Init;
+procedure tTests_inkLLc_00_BASE.Init;
 begin
     LIST:=@self;
     //---
-    inkCLL_INIT(LIST);
+    inkLLc_INIT(LIST);
     //---
     AssertNull (LIST);
 end;
 
 initialization
-    RegisterTest(cTestSuitePath__inkCLL,tTests_inkCLL_00_BASE);
+    RegisterTest(cTestSuitePath__inkLLc,tTests_inkLLc_00_BASE);
 end.
 
