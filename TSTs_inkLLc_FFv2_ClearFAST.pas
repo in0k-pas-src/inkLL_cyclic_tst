@@ -7,7 +7,7 @@ interface
 
 uses testregistry,
     uTST_CORE_inkLLc,
-     inkLL_cyclic;
+    inkLL_node, inkLL_cyclic;
 
 type
 
@@ -23,7 +23,7 @@ implementation
 
 procedure  tTests_inkLLc_FFv2_ClearFAST.Clear_Nil;
 begin
-    inkLLc_CLEAR_fast(LIST,@TST_node_DESTROY);
+    inkLLc_CLEAR_fast(LIST,aInkNodeLL_doDispose(@TST_node_DESTROY));
     //---
     AssertNull(LIST);
 end;
@@ -32,7 +32,7 @@ procedure  tTests_inkLLc_FFv2_ClearFAST.Clear_One;
 begin
     LIST:=TST_list_crt_One;
     //--
-    inkLLc_CLEAR_fast(LIST,@TST_node_DESTROY);
+    inkLLc_CLEAR_fast(LIST,aInkNodeLL_doDispose(@TST_node_DESTROY));
     //--
     AssertNull(LIST);
 end;
@@ -41,7 +41,7 @@ procedure  tTests_inkLLc_FFv2_ClearFAST.Clear_Two;
 begin
     LIST:=TST_list_crt_Two;
     //--
-    inkLLc_CLEAR_fast(LIST,@TST_node_DESTROY);
+    inkLLc_CLEAR_fast(LIST,aInkNodeLL_doDispose(@TST_node_DESTROY));
     //--
     AssertNull(LIST);
 end;
@@ -50,7 +50,7 @@ procedure  tTests_inkLLc_FFv2_ClearFAST.Clear_Six;
 begin
     LIST:=TST_list_crt_Six;
     //--
-    inkLLc_CLEAR_fast(LIST,@TST_node_DESTROY);
+    inkLLc_CLEAR_fast(LIST,aInkNodeLL_doDispose(@TST_node_DESTROY));
     //--
     AssertNull(LIST);
 end;

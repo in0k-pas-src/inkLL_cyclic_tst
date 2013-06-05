@@ -10,6 +10,7 @@ uses
   //---
   TSTs_inkLLc_00_BASE,
   TSTs_inkLLc_FFv2_ClearFAST,
+  TSTs_inkLLc_E4_Erase,
   TSTs_inkLLc_11_Count,
   //---
   TSTs_inkLLc_20_Enumerate,
